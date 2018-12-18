@@ -38,8 +38,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.List;
 
-import com.stag.settings.preferences.PackageListAdapter;
-import com.stag.settings.preferences.PackageListAdapter.PackageItem;
+import com.stag.horns.preferences.PackageListAdapter;
+import com.stag.horns.preferences.PackageListAdapter.PackageItem;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
@@ -98,7 +98,7 @@ public class PulseBlacklist extends SettingsPreferenceFragment implements
     public int getDialogMetricsCategory(int dialogId) {
         switch (dialogId) {
             case DIALOG_BLACKLIST_APPS:
-                return MetricsEvent.STAG_SETTINGS;
+                return MetricsEvent.HORNS;
             default:
                 return 0;
         }
@@ -122,7 +122,7 @@ public class PulseBlacklist extends SettingsPreferenceFragment implements
 
     @Override
     public int getMetricsCategory() {
-        return MetricsEvent.STAG_SETTINGS;
+        return MetricsEvent.HORNS;
     }
 
     @Override
