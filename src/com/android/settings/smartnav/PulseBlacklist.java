@@ -241,7 +241,7 @@ public class PulseBlacklist extends SettingsPreferenceFragment implements
     private boolean parsePackageList() {
         boolean parsed = false;
         final String blacklistString = Settings.Secure.getString(getContentResolver(),
-                Settings.Secure.PULSE_APPS_BLACKLIST);
+                Settings.System.PULSE_APPS_BLACKLIST);
 
         if (!TextUtils.equals(mBlacklistPackageList, blacklistString)) {
             mBlacklistPackageList = blacklistString;
@@ -270,7 +270,7 @@ public class PulseBlacklist extends SettingsPreferenceFragment implements
 
 
     private void savePackageList(boolean preferencesUpdated, Map<String,Package> map) {
-        String setting = Settings.Secure.PULSE_APPS_BLACKLIST;
+        String setting = Settings.System.PULSE_APPS_BLACKLIST;
 
         List<String> settings = new ArrayList<String>();
         for (Package app : map.values()) {
